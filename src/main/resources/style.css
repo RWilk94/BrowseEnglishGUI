@@ -1,0 +1,48 @@
+* {
+    -fx-lightGreyBackground: #3C3E41;
+    -fx-darkGreyBackground: #2B2B2B;
+    -fx-greyText: #bbbbbb;
+}
+
+.darkBackground {
+    -fx-background-color: -fx-lightGreyBackground;
+}
+
+/*.button {*/
+/*    -fx-background-color: -fx-lightGreyBackground;*/
+/*    -fx-text-fill: -fx-greyText;*/
+/*}*/
+
+.buttonToolbar {
+    -fx-background-color: -fx-lightGreyBackground;
+    -fx-text-fill: -fx-greyText;
+}
+
+.buttonToolbar:selected {
+    -fx-background-color: -fx-darkGreyBackground;
+    -fx-text-fill: -fx-greyText;
+}
+
+.buttonToolbar:hover{
+    -fx-background-color: -fx-darkGreyBackground;
+}
+
+.check-box {
+    -fx-text-fill: -fx-greyText;
+}
+
+.inactiveButton {
+    -fx-padding: 1 1;
+}
+
+.activeButton {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-padding: 1 1;
+}
+
+.lessonIsReady {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-padding: 1 1;
+}

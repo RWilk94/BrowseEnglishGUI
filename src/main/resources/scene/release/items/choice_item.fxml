@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="rwilk.browseenglish.release.controller.item.ChoiceItem"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <HBox>
+    <VBox>
+      <Label text="Choice" minWidth="60">
+        <HBox.margin>
+          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </HBox.margin>
+      </Label>
+      <HBox>
+        <Button text="U" onAction="#buttonUpOnAction"/>
+        <Button text="D" onAction="#buttonDownOnAction"/>
+        <Button text="R" onAction="#buttonRemoveOnAction"/>
+        <VBox.margin>
+          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </VBox.margin>
+      </HBox>
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="Question"/>
+      <TextField fx:id="textFieldQuestion" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="CorrectAnswer"/>
+      <TextField fx:id="textFieldCorrectAnswer" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="CorrectAnswerAfterChoice"/>
+      <TextField fx:id="textFieldCorrectAnswerAfterChoice" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="FirstAnswer"/>
+      <TextField fx:id="textFieldFirstAnswer" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="SecondAnswer"/>
+      <TextField fx:id="textFieldSecondAnswer" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="ThirdAnswer"/>
+      <TextField fx:id="textFieldThirdAnswer" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="FourthAnswer"/>
+      <TextField fx:id="textFieldFourthAnswer" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+  </HBox>
+
+</VBox>

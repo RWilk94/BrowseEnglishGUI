@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="rwilk.browseenglish.controller.word.DuplicateTableController"
+  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <HBox>
+    <TextField fx:id="textFieldFilterByName" promptText="Filter by name here..." HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+
+    <CheckBox fx:id="checkBoxWholeWord" onAction="#checkBoxWholeWordOnAction" selected="true" text="Whole word" >
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="7.5"/>
+      </HBox.margin>
+    </CheckBox>
+  </HBox>
+  <HBox>
+    <TextField fx:id="textFieldId">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+    <Button text="Delete" onAction="#buttonDeleteOnAction">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </Button>
+    <CheckBox fx:id="checkBoxIsReady" onAction="#checkBoxIsReadyOnAction" selected="true" text="Is Ready">
+    <HBox.margin>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="7.5"/>
+    </HBox.margin>
+    </CheckBox>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Button text="Delete All" onAction="#buttonDeleteAllOnAction">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </Button>
+  </HBox>
+
+  <TableView fx:id="tableViewWords" VBox.vgrow="ALWAYS" onMouseClicked="#tableViewWordsOnMouseClicked"
+    onKeyReleased="#tableViewWordsOnKeyReleased">
+    <columns>
+      <TableColumn fx:id="columnId" minWidth="20.0" prefWidth="-1.0" text="Id">
+        <cellValueFactory>
+          <PropertyValueFactory property="id"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnEnName" minWidth="20.0" prefWidth="-1.0" text="En Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="enName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnUsName" minWidth="20.0" prefWidth="-1.0" text="Us Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="usName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnOtherName" minWidth="20.0" prefWidth="-1.0" text="Other Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="otherNames"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPlName" minWidth="20.0" prefWidth="-1.0" text="Pl Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="plName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnLevel" minWidth="20.0" prefWidth="-1.0" text="Level">
+        <cellValueFactory>
+          <PropertyValueFactory property="level"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnLesson" minWidth="20.0" prefWidth="-1.0" text="Lesson">
+        <cellValueFactory>
+          <PropertyValueFactory property="lesson"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPartOfSpeech" minWidth="20.0" prefWidth="-1.0" text="PartOfSpeech">
+        <cellValueFactory>
+          <PropertyValueFactory property="partOfSpeech"/>
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+</VBox>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="rwilk.browseenglish.controller.word.WordTableController"
+  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <HBox>
+  <TextField fx:id="textFieldFilterByName" promptText="Filter by name here..." HBox.hgrow="ALWAYS">
+    <HBox.margin>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+    </HBox.margin>
+  </TextField>
+    <TextField fx:id="textFieldFilterByLevel" maxWidth="50" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+</HBox>
+
+  <HBox>
+    <TextField fx:id="textFieldFilterByLesson" promptText="Filter by lesson here..." HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+    <TextField fx:id="textFieldFilterByCourse" promptText="Filter by course here..." HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+  </HBox>
+
+  <TableView fx:id="tableViewWords" VBox.vgrow="ALWAYS" onMouseClicked="#tableViewWordsOnMouseClicked" onKeyReleased="#tableViewWordsOnKeyReleased">
+    <columns>
+      <TableColumn fx:id="columnId" minWidth="20.0" prefWidth="-1.0" text="Id">
+        <cellValueFactory>
+          <PropertyValueFactory property="id"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnEnName" minWidth="20.0" prefWidth="-1.0" text="En Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="enName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnUsName" minWidth="20.0" prefWidth="-1.0" text="Us Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="usName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnOtherName" minWidth="20.0" prefWidth="-1.0" text="Other Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="otherNames"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPlName" minWidth="20.0" prefWidth="-1.0" text="Pl Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="plName"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnLevel" minWidth="20.0" prefWidth="-1.0" text="Level">
+        <cellValueFactory>
+          <PropertyValueFactory property="level"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnLesson" minWidth="20.0" prefWidth="-1.0" text="Lesson">
+        <cellValueFactory>
+          <PropertyValueFactory property="lesson"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPartOfSpeech" minWidth="20.0" prefWidth="-1.0" text="PartOfSpeech">
+        <cellValueFactory>
+          <PropertyValueFactory property="partOfSpeech"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnComparative" minWidth="20.0" prefWidth="-1.0" text="Comparative">
+        <cellValueFactory>
+          <PropertyValueFactory property="comparative"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnSuperlative" minWidth="20.0" prefWidth="-1.0" text="Superlative">
+        <cellValueFactory>
+          <PropertyValueFactory property="superlative"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPastTense" minWidth="20.0" prefWidth="-1.0" text="PastTense">
+        <cellValueFactory>
+          <PropertyValueFactory property="pastTense"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPastParticiple" minWidth="20.0" prefWidth="-1.0" text="PastParticiple">
+        <cellValueFactory>
+          <PropertyValueFactory property="pastParticiple"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPlural" minWidth="20.0" prefWidth="-1.0" text="Plural">
+        <cellValueFactory>
+          <PropertyValueFactory property="plural"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnSynonym" minWidth="20.0" prefWidth="-1.0" text="Synonym">
+        <cellValueFactory>
+          <PropertyValueFactory property="synonym"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnGrammar" minWidth="20.0" prefWidth="-1.0" text="Grammar">
+        <cellValueFactory>
+          <PropertyValueFactory property="grammarType"/>
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+</VBox>

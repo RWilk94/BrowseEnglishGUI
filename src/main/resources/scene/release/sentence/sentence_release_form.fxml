@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="rwilk.browseenglish.release.controller.sentence.SentenceReleaseFormController"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0"
+            fitToWidth="true" fitToHeight="true">
+
+  <VBox>
+
+    <HBox>
+      <VBox>
+        <Label text="Id"/>
+        <TextField fx:id="textFieldId" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Sound"/>
+        <TextField fx:id="textFieldSound" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Button text="Match" onAction="#buttonMatchSoundOnAction">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </Button>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Button text="Sound" onAction="#buttonSoundOnAction">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </Button>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="EnName"/>
+        <TextField fx:id="textFieldEnName" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="PlName"/>
+        <TextField fx:id="textFieldPlName" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <Button text="Save All" onAction="#buttonSaveAllWordOnAction">
+        <HBox.margin>
+          <Insets bottom="2.5" left="5.0" right="5.0" top="2.5"/>
+        </HBox.margin>
+      </Button>
+      <Region HBox.hgrow="ALWAYS"/>
+      <Button text="Save" onAction="#buttonSaveWordOnAction">
+        <HBox.margin>
+          <Insets bottom="2.5" left="5.0" right="5.0" top="2.5"/>
+        </HBox.margin>
+      </Button>
+    </HBox>
+
+  </VBox>
+
+</ScrollPane>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<HBox
+  xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+  fx:controller="rwilk.browseenglish.controller.scrapper.EmptyTabController"
+  alignment="CENTER" prefWidth="100" prefHeight="100">
+
+  <Text text="Not found translation in diki.pl"/>
+
+</HBox>

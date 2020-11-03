@@ -1,0 +1,170 @@
+<div ng-cloak sentence-and-translations
+     ng-init="vm.init([], {&quot;id&quot;:294969,&quot;text&quot;:&quot;He hit me by mistake.&quot;,&quot;lang&quot;:&quot;eng&quot;,&quot;langName&quot;:&quot;angielski&quot;,&quot;script&quot;:null,&quot;dir&quot;:&quot;ltr&quot;,&quot;audios&quot;:[{&quot;user_id&quot;:79133,&quot;external&quot;:null,&quot;sentence_id&quot;:294969,&quot;user&quot;:{&quot;username&quot;:&quot;Sean_Benward&quot;,&quot;audio_license&quot;:null,&quot;audio_attribution_url&quot;:null}}],&quot;correctness&quot;:0,&quot;highlightedText&quot;:&quot;He hit me <span class=\&quot;match\&quot;>by mistake<\/span>.&quot;}, [], [{&quot;id&quot;:933078,&quot;text&quot;:&quot;Uderzy\u0142 mnie przez pomy\u0142k\u0119.&quot;,&quot;lang&quot;:&quot;pol&quot;,&quot;langName&quot;:&quot;polski&quot;,&quot;script&quot;:null,&quot;dir&quot;:&quot;ltr&quot;,&quot;audios&quot;:null,&quot;correctness&quot;:0},{&quot;id&quot;:933080,&quot;text&quot;:&quot;Niechc\u0105cy mnie waln\u0105\u0142.&quot;,&quot;lang&quot;:&quot;pol&quot;,&quot;langName&quot;:&quot;polski&quot;,&quot;script&quot;:null,&quot;dir&quot;:&quot;ltr&quot;,&quot;audios&quot;:null,&quot;correctness&quot;:0}])"
+     class="sentence-and-translations md-whiteframe-1dp">
+  <div layout="column">
+    <div layout="row" class="header">
+      <md-subheader flex class="ellipsis">
+        Sentence
+        <a href="/pol/sentences/show/294969">#294969</a> — belongs to
+        <a href="/pol/user/profile/CK">CK</a>
+      </md-subheader>
+    </div>
+    <div class="sentence " layout="row" layout-align="start center" ng-if="!vm.isSentenceFormVisible">
+      <div class="lang">
+        <language-icon lang="vm.sentence.lang" title="vm.sentence.langName"></language-icon>
+      </div>
+      <div class="text" flex dir="{{vm.sentence.dir}}"
+           ng-bind-html="vm.sentence.highlightedText ? vm.sentence.highlightedText : vm.sentence.text"></div>
+      <md-button class="md-icon-button audioAvailable"
+                 ng-href="https://audio.tatoeba.org/sentences/{{vm.sentence.lang}}/{{vm.sentence.id}}.mp3" ng-click="vm.playAudio($event)"
+                 ng-if="vm.sentence.audios &amp;&amp; vm.sentence.audios.length > 0">
+        <md-icon>
+          volume_up
+        </md-icon>
+        <md-tooltip md-direction="top" ng-if="!vm.getAudioAuthor(vm.sentence)">
+          Odtwórz dźwięk
+        </md-tooltip>
+        <md-tooltip md-direction="top" ng-if="vm.getAudioAuthor(vm.sentence)">
+          Play audio recorded by {{vm.getAudioAuthor(vm.sentence)}}
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button audioUnavailable" target="_blank" ng-if="!vm.sentence.audios || vm.sentence.audios.length === 0"
+                 href="https://en.wiki.tatoeba.org/articles/show/contribute-audio">
+        <md-icon>
+          volume_off
+        </md-icon>
+        <md-tooltip md-direction="top">
+          Brak nagrania tego zdania. Kliknij, aby dowiedzieć się, jak je dodać.
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button" href="/pol/sentences/show/294969">
+        <md-icon>
+          info
+        </md-icon>
+      </md-button>
+    </div>
+  </div>
+  <md-progress-linear ng-if="vm.inProgress"></md-progress-linear>
+  <div layout="column" class="direct translations" ng-if="!vm.isTranslationFormVisible &amp;&amp; vm.directTranslations.length > 0">
+    <md-divider></md-divider>
+    <md-subheader>
+      Tłumaczenia
+    </md-subheader>
+    <div ng-repeat="translation in vm.directTranslations" layout="row" layout-align="start center" class="translation"
+         ng-class="{'not-reliable' : translation.correctness === -1}">
+      <md-icon class="chevron">
+        chevron_right
+      </md-icon>
+      <div class="lang">
+        <language-icon lang="translation.lang" title="translation.langName"></language-icon>
+      </div>
+      <div class="text" dir="{{translation.dir}}" flex>
+        {{translation.text}}
+      </div>
+      <div ng-if="translation.correctness === -1">
+        <md-icon class="md-warn">
+          warning
+        </md-icon>
+        <md-tooltip md-direction="top">
+          This sentence is not reliable.
+        </md-tooltip>
+      </div>
+      <md-button class="md-icon-button" ng-if="translation.editable" ng-click="vm.editTranslation(translation)">
+        <md-icon>
+          edit
+        </md-icon>
+        <md-tooltip>
+          Edit this translation
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button audioAvailable"
+                 ng-href="https://audio.tatoeba.org/sentences/{{translation.lang}}/{{translation.id}}.mp3" ng-click="vm.playAudio($event)"
+                 ng-if="translation.audios &amp;&amp; translation.audios.length > 0">
+        <md-icon>
+          volume_up
+        </md-icon>
+        <md-tooltip md-direction="top" ng-if="!vm.getAudioAuthor(translation)">
+          Odtwórz dźwięk
+        </md-tooltip>
+        <md-tooltip md-direction="top" ng-if="vm.getAudioAuthor(translation)">
+          Play audio recorded by {{vm.getAudioAuthor(translation)}}
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button audioUnavailable" target="_blank" ng-if="!translation.audios || translation.audios.length === 0"
+                 href="https://en.wiki.tatoeba.org/articles/show/contribute-audio">
+        <md-icon>
+          volume_off
+        </md-icon>
+        <md-tooltip md-direction="top">
+          Brak nagrania tego zdania. Kliknij, aby dowiedzieć się, jak je dodać.
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button" href="/pol/sentences/show/{{translation.id}}">
+        <md-icon>
+          info
+        </md-icon>
+      </md-button>
+    </div>
+  </div>
+  <div layout="column" class="indirect translations" ng-if="!vm.isTranslationFormVisible &amp;&amp; vm.indirectTranslations.length > 0"
+       ng-init="vm.initIndirectTranslations([{&quot;id&quot;:933078,&quot;text&quot;:&quot;Uderzy\u0142 mnie przez pomy\u0142k\u0119.&quot;,&quot;lang&quot;:&quot;pol&quot;,&quot;langName&quot;:&quot;polski&quot;,&quot;script&quot;:null,&quot;dir&quot;:&quot;ltr&quot;,&quot;audios&quot;:null,&quot;correctness&quot;:0},{&quot;id&quot;:933080,&quot;text&quot;:&quot;Niechc\u0105cy mnie waln\u0105\u0142.&quot;,&quot;lang&quot;:&quot;pol&quot;,&quot;langName&quot;:&quot;polski&quot;,&quot;script&quot;:null,&quot;dir&quot;:&quot;ltr&quot;,&quot;audios&quot;:null,&quot;correctness&quot;:0}])">
+    <md-subheader>
+      Translations of translations
+    </md-subheader>
+    <div ng-repeat="translation in vm.indirectTranslations" layout="row" layout-align="start center" class="translation"
+         ng-class="{'not-reliable' : translation.correctness === -1}">
+      <md-icon class="chevron">
+        chevron_right
+      </md-icon>
+      <div class="lang">
+        <language-icon lang="translation.lang" title="translation.langName"></language-icon>
+      </div>
+      <div class="text" dir="{{translation.dir}}" flex>
+        {{translation.text}}
+      </div>
+      <div ng-if="translation.correctness === -1">
+        <md-icon class="md-warn">
+          warning
+        </md-icon>
+        <md-tooltip md-direction="top">
+          This sentence is not reliable.
+        </md-tooltip>
+      </div>
+      <md-button class="md-icon-button" ng-if="translation.editable" ng-click="vm.editTranslation(translation)">
+        <md-icon>
+          edit
+        </md-icon>
+        <md-tooltip>
+          Edit this translation
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button audioAvailable"
+                 ng-href="https://audio.tatoeba.org/sentences/{{translation.lang}}/{{translation.id}}.mp3" ng-click="vm.playAudio($event)"
+                 ng-if="translation.audios &amp;&amp; translation.audios.length > 0">
+        <md-icon>
+          volume_up
+        </md-icon>
+        <md-tooltip md-direction="top" ng-if="!vm.getAudioAuthor(translation)">
+          Odtwórz dźwięk
+        </md-tooltip>
+        <md-tooltip md-direction="top" ng-if="vm.getAudioAuthor(translation)">
+          Play audio recorded by {{vm.getAudioAuthor(translation)}}
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button audioUnavailable" target="_blank" ng-if="!translation.audios || translation.audios.length === 0"
+                 href="https://en.wiki.tatoeba.org/articles/show/contribute-audio">
+        <md-icon>
+          volume_off
+        </md-icon>
+        <md-tooltip md-direction="top">
+          Brak nagrania tego zdania. Kliknij, aby dowiedzieć się, jak je dodać.
+        </md-tooltip>
+      </md-button>
+      <md-button class="md-icon-button" href="/pol/sentences/show/{{translation.id}}">
+        <md-icon>
+          info
+        </md-icon>
+      </md-button>
+    </div>
+  </div>
+</div>

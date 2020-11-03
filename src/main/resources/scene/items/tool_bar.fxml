@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Text?>
+
+<ToolBar xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="rwilk.browseenglish.controller.tool.ToolBarController" style="-fx-background-color: #3C3E41">
+  <HBox>
+    <Button styleClass="buttonToolbar" text="Release" onAction="#openReleasePanelOnAction">
+      <HBox.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+      </HBox.margin>
+    </Button>
+    <Button styleClass="buttonToolbar" text="Courses" onAction="#openCoursePanelOnAction">
+      <HBox.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+      </HBox.margin>
+    </Button>
+    <Button styleClass="buttonToolbar" text="Lessons" onAction="#openLessonPanelOnAction">
+      <HBox.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+      </HBox.margin>
+    </Button>
+  </HBox>
+  <Separator/>
+
+  <HBox>
+    <ToggleButton styleClass="buttonToolbar" fx:id="toggleButtonTranslations" onAction="#toggleButtonTranslationsOnAction" text="Translations">
+      <HBox.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+      </HBox.margin>
+    </ToggleButton>
+    <ToggleButton styleClass="buttonToolbar" fx:id="toggleButtonLessons" onAction="#toggleButtonLessonsOnAction" text="Grouping">
+      <HBox.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+      </HBox.margin>
+    </ToggleButton>
+  </HBox>
+  <Separator/>
+  <HBox fx:id="hBoxPinnedLesson">
+  </HBox>
+  <Separator />
+  <ToggleButton styleClass="buttonToolbar" onAction="#toggleButtonUnpinAllOnAction" text="Unpin All">
+    <HBox.margin>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+    </HBox.margin>
+  </ToggleButton>
+  <Separator />
+  <Region HBox.hgrow="ALWAYS"/>
+  <CheckBox fx:id="checkBoxShowColumnUsName" onAction="#checkBoxShowColumnUsNameOnAction" selected="true" text="UsName" />
+  <CheckBox fx:id="checkBoxShowColumnOtherName" onAction="#checkBoxShowColumnOtherNameOnAction" selected="true" text="OtherName" />
+  <CheckBox fx:id="checkBoxShowColumnLevel" onAction="#checkBoxShowColumnLevelOnAction" selected="true" text="Level" />
+  <CheckBox fx:id="checkBoxShowColumnLesson" onAction="#checkBoxShowColumnLessonOnAction" selected="true" text="Lesson" />
+  <CheckBox fx:id="checkBoxShowColumnPartOfSpeech" onAction="#checkBoxShowColumnPartOfSpeechOnAction" selected="true" text="PartOfSpeech" />
+  <CheckBox fx:id="checkBoxShowColumnComparative" onAction="#checkBoxShowColumnComparativeOnAction" selected="true" text="Comparative" />
+  <CheckBox fx:id="checkBoxShowColumnSuperlative" onAction="#checkBoxShowColumnSuperlativeOnAction" selected="true" text="Superlative" />
+  <CheckBox fx:id="checkBoxShowColumnPastTense" onAction="#checkBoxShowColumnPastTenseOnAction" selected="true" text="PastTense" />
+  <CheckBox fx:id="checkBoxShowColumnPastParticiple" onAction="#checkBoxShowColumnPastParticipleOnAction" selected="true" text="PastParticiple" />
+  <CheckBox fx:id="checkBoxShowColumnPlural" onAction="#checkBoxShowColumnPluralOnAction" selected="true" text="Plural" />
+  <CheckBox fx:id="checkBoxShowColumnSynonym" onAction="#checkBoxShowColumnSynonymOnAction" selected="true" text="Synonym" />
+  <CheckBox fx:id="checkBoxShowColumnGrammar" onAction="#checkBoxShowColumnGrammarOnAction" selected="true" text="Grammar" />
+  <Separator/>
+  <Text fx:id="textStatus" style="-fx-fill: #bbbbbb;" strokeType="INSIDE" strokeWidth="0.0"/>
+
+</ToolBar>

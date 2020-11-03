@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<SplitPane
+    fx:controller="rwilk.browseenglish.controller.view.LeftSideController"
+    xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+    orientation="VERTICAL" dividerPositions="0.675"
+    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <AnchorPane>
+    <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Tab text="Release">
+        <fx:include source="release/form/word_release_form.fxml"/>
+      </Tab>
+      <Tab text="Sentence">
+        <fx:include source="release/sentence/sentence_release_form.fxml"/>
+      </Tab>
+      <Tab text="Old">
+        <fx:include source="word_form.fxml"/>
+      </Tab>
+    </TabPane>
+
+  </AnchorPane>
+  <AnchorPane>
+    <fx:include fx:id="scrapperForm" source="scrapper_form.fxml" visible="true"/>
+    <fx:include fx:id="groupForm" source="group/group_form.fxml" visible="false"/>
+  </AnchorPane>
+
+</SplitPane>

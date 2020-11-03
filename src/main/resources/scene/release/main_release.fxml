@@ -1,0 +1,25 @@
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import java.net.URL?>
+<BorderPane
+    fx:controller="rwilk.browseenglish.release.controller.MainReleaseController"
+    xmlns:fx="http://javafx.com/fxml">
+
+  <center>
+    <SplitPane dividerPositions="0.6">
+      <AnchorPane fx:id="anchorPaneWordReleaseForm" minHeight="0" minWidth="0">
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneWordReleaseTable" minHeight="0" minWidth="0">
+      </AnchorPane>
+    </SplitPane>
+  </center>
+
+  <bottom>
+    <!--    <fx:include source="items/tool_bar.fxml"/>-->
+  </bottom>
+
+  <stylesheets>
+    <URL value="@../../style.css"/>
+  </stylesheets>
+</BorderPane>

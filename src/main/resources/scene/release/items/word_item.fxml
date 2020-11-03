@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="rwilk.browseenglish.release.controller.item.WordItem"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+
+  <HBox>
+    <VBox>
+      <Label text="Word" minWidth="60">
+        <HBox.margin>
+          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </HBox.margin>
+      </Label>
+      <HBox>
+        <Button text="U" onAction="#buttonUpOnAction"/>
+        <Button text="D" onAction="#buttonDownOnAction"/>
+        <Button text="R" onAction="#buttonRemoveOnAction"/>
+        <VBox.margin>
+          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </VBox.margin>
+      </HBox>
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="Id"/>
+      <TextField fx:id="textFieldWordId" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <Button text="Load" onAction="#loadWord">
+      <HBox.margin>
+        <Insets bottom="26.5" left="2.5" right="2.5" top="26.5"/>
+      </HBox.margin>
+    </Button>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="EN name"/>
+      <TextField fx:id="textFieldEnName" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="US name"/>
+      <TextField fx:id="textFieldUsName" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="Other names"/>
+      <TextField fx:id="textFieldOtherNames" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+      <Label text="PL name"/>
+      <TextField fx:id="textFieldPlName" HBox.hgrow="ALWAYS">
+        <VBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+        </VBox.margin>
+      </TextField>
+      <HBox.margin>
+        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0"/>
+      </HBox.margin>
+    </VBox>
+
+  </HBox>
+
+</VBox>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="rwilk.browseenglish.release.controller.sentence.SentenceReleaseTableController"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <TableView fx:id="tableViewSentences" VBox.vgrow="ALWAYS" onMouseClicked="#tableViewSentencesOnMouseClicked">
+    <columns>
+      <TableColumn fx:id="columnId" minWidth="20.0" prefWidth="-1.0" text="Id">
+        <cellValueFactory>
+          <PropertyValueFactory property="id"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnEnSentence" minWidth="20.0" prefWidth="-1.0" text="En Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="enSentence"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnPlSentence" minWidth="20.0" prefWidth="-1.0" text="Pl Name">
+        <cellValueFactory>
+          <PropertyValueFactory property="plSentence"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnSound" minWidth="20.0" prefWidth="-1.0" text="Sound">
+        <cellValueFactory>
+          <PropertyValueFactory property="sound"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnWord" minWidth="20.0" prefWidth="-1.0" text="Word">
+        <cellValueFactory>
+          <PropertyValueFactory property="word"/>
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+</VBox>

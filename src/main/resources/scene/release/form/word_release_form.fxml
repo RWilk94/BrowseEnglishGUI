@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="rwilk.browseenglish.release.controller.word.WordReleaseFormController"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0"
+            fitToWidth="true" fitToHeight="true">
+
+  <VBox>
+
+    <HBox>
+      <VBox>
+        <Label text="Id"/>
+        <TextField fx:id="textFieldId" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Sound"/>
+        <TextField fx:id="textFieldSound" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Button text="Translate" onAction="#buttonTranslateOnAction">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </Button>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Button text="Match" onAction="#buttonMatchSoundOnAction">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </Button>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+      <VBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Button text="Sound" onAction="#buttonSoundOnAction">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </Button>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="EnName"/>
+        <TextField fx:id="textFieldEnName" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="UsName"/>
+        <TextField fx:id="textFieldUsName" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="PlName"/>
+        <TextField fx:id="textFieldPlName" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Other Names"/>
+        <TextField fx:id="textFieldOtherNames" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+
+      <Button text="Dot" onAction="#buttonDotOnAction">
+        <HBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="21.5"/>
+        </HBox.margin>
+      </Button>
+      <Button text="Extract" onAction="#buttonExtractOnAction">
+        <HBox.margin>
+          <Insets bottom="5.0" left="2.5" right="2.5" top="21.5"/>
+        </HBox.margin>
+      </Button>
+    </HBox>
+
+    <HBox BorderPane.alignment="TOP_CENTER">
+      <VBox>
+        <Label text="Part of Speech" minWidth="100">
+          <HBox.margin>
+            <Insets bottom="2.5" left="5.0" right="5.0" top="10.0"/>
+          </HBox.margin>
+        </Label>
+        <HBox>
+          <ToggleButton fx:id="toggleButtonNoun" text="rzeczownik">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonVerb" text="czasownik">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonAdjective" text="przymiotnik">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonAdverb" text="przysłówek">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonPhrasalVerb" text="phrasal verb">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonSentence" text="wyrażenie">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonIdiom" text="idiom">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonOther" text="inne">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+        </HBox>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox BorderPane.alignment="TOP_CENTER">
+      <VBox>
+        <Label text="Grammar type" minWidth="100">
+          <HBox.margin>
+            <Insets bottom="2.5" left="5.0" right="5.0" top="10.0"/>
+          </HBox.margin>
+        </Label>
+        <HBox>
+          <ToggleButton fx:id="toggleButtonCountable" text="countable">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonUncountable" text="uncountable">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonCountableUncountable" text="countable and uncountable">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonSingular" text="singular">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonPlural" text="plural">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonTransitive" text="transitive">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonIntransitive" text="intransitive">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonEmpty" text="empty">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+        </HBox>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox BorderPane.alignment="TOP_CENTER">
+      <VBox>
+        <Label text="Article" minWidth="100">
+          <HBox.margin>
+            <Insets bottom="2.5" left="5.0" right="5.0" top="10.0"/>
+          </HBox.margin>
+        </Label>
+
+        <HBox>
+          <ToggleButton fx:id="toggleButtonA" text="a">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonAn" text="an">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+          <ToggleButton fx:id="toggleButtonNone" text=" ">
+            <HBox.margin>
+              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+            </HBox.margin>
+          </ToggleButton>
+        </HBox>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Comparative"/>
+        <TextField fx:id="textFieldComparative" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Superlative"/>
+        <TextField fx:id="textFieldSuperlative" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="PastTense"/>
+        <TextField fx:id="textFieldPastTense" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="PastParticiple"/>
+        <TextField fx:id="textFieldPastParticiple" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Plural"/>
+        <TextField fx:id="textFieldPlural" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+
+      <VBox HBox.hgrow="ALWAYS">
+        <Label text="Synonym"/>
+        <TextField fx:id="textFieldSynonym" HBox.hgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+          </VBox.margin>
+        </TextField>
+        <HBox.margin>
+          <Insets bottom="2.5" left="2.5" right="2.5" top="2.5"/>
+        </HBox.margin>
+      </VBox>
+    </HBox>
+
+    <HBox HBox.hgrow="ALWAYS">
+      <Button onAction="#buttonSaveAllWordOnAction" text="Save All">
+        <HBox.margin>
+          <Insets bottom="2.5" left="5.0" right="5.0" top="2.5"/>
+        </HBox.margin>
+      </Button>
+      <Button onAction="#buttonRemoveWordOnAction" text="Remove">
+        <HBox.margin>
+          <Insets bottom="2.5" left="5.0" right="5.0" top="2.5"/>
+        </HBox.margin>
+      </Button>
+      <Region HBox.hgrow="ALWAYS"/>
+      <Button onAction="#buttonSaveWordOnAction" text="Save">
+        <HBox.margin>
+          <Insets bottom="2.5" left="5.0" right="5.0" top="2.5"/>
+        </HBox.margin>
+      </Button>
+    </HBox>
+
+
+  </VBox>
+
+</ScrollPane>

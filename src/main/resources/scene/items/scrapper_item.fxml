@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rwilk.browseenglish.controller.scrapper.ScrapperController">
+
+  <HBox>
+    <VBox HBox.hgrow="ALWAYS" prefWidth="100">
+      <HBox HBox.hgrow="ALWAYS">
+        <Label minWidth="50" style="-fx-font-weight: bold;" text="EN Name">
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+          </HBox.margin>
+        </Label>
+        <TextField fx:id="textFieldEnWord" style="-fx-font-weight: bold;" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </HBox.margin>
+        </TextField>
+      </HBox>
+      <HBox HBox.hgrow="ALWAYS">
+        <Label minWidth="50" text="US Name">
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+          </HBox.margin>
+        </Label>
+        <TextField fx:id="textFieldUsWord" HBox.hgrow="ALWAYS">
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </HBox.margin>
+        </TextField>
+      </HBox>
+    </VBox>
+
+    <HBox HBox.hgrow="ALWAYS" prefWidth="100">
+      <TextArea fx:id="textAreaOtherVersion" maxHeight="60" HBox.hgrow="ALWAYS">
+        <HBox.margin>
+          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </HBox.margin>
+      </TextArea>
+    </HBox>
+  </HBox>
+
+  <HBox>
+    <ListView fx:id="listViewMeaning" HBox.hgrow="ALWAYS" maxHeight="140" onMouseClicked="#listViewMeaningOnMouseClicked">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </ListView>
+    <ListView fx:id="listViewSentence" HBox.hgrow="ALWAYS"  maxHeight="140">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </ListView>
+  </HBox>
+  <HBox>
+    <Label minWidth="100" text="Past Tense">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldPastTense" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </TextField>
+    <Label minWidth="100" text="Past Participle">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldPastParticiple" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </TextField>
+  </HBox>
+
+  <HBox>
+    <Label minWidth="100" text="Comparative">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldComparative" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </TextField>
+    <Label minWidth="100" text="Superlative">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldSuperlative" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </HBox.margin>
+    </TextField>
+  </HBox>
+
+  <HBox BorderPane.alignment="TOP_CENTER">
+    <Label text="Plural" minWidth="100">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0"/>
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldPlural" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+    <Label text="Synonym" minWidth="100">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0"/>
+      </HBox.margin>
+    </Label>
+    <TextField fx:id="textFieldSynonym" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </TextField>
+  </HBox>
+
+  <HBox>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Button text="Load" onAction="#buttonLoadDataOnAction">
+      <HBox.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </Button>
+  </HBox>
+
+</VBox>

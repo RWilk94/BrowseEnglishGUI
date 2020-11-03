@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="rwilk.browseenglish.release.controller.ReleaseTableController"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <TableView fx:id="tableViewWordReleases" VBox.vgrow="ALWAYS" >
+    <columns>
+      <TableColumn fx:id="columnId" minWidth="20.0" prefWidth="-1.0" text="Id">
+        <cellValueFactory>
+          <PropertyValueFactory property="id"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnLesson" minWidth="20.0" prefWidth="-1.0" text="Lesson">
+        <cellValueFactory>
+          <PropertyValueFactory property="lesson"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnGrammarType" minWidth="20.0" prefWidth="-1.0" text="GrammarType">
+        <cellValueFactory>
+          <PropertyValueFactory property="grammarType"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnNote" minWidth="20.0" prefWidth="-1.0" text="Note">
+        <cellValueFactory>
+          <PropertyValueFactory property="note"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnQuestion" minWidth="20.0" prefWidth="-1.0" text="Question">
+        <cellValueFactory>
+          <PropertyValueFactory property="question"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnCorrectAnswer" minWidth="20.0" prefWidth="-1.0" text="correctAnswer">
+        <cellValueFactory>
+          <PropertyValueFactory property="correctAnswer"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnCorrectAnswerAfterChoice" minWidth="20.0" prefWidth="-1.0" text="correctAnswerAfterChoice">
+        <cellValueFactory>
+          <PropertyValueFactory property="correctAnswerAfterChoice"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnFirstPossibleAnswer" minWidth="20.0" prefWidth="-1.0" text="firstPossibleAnswer">
+        <cellValueFactory>
+          <PropertyValueFactory property="firstPossibleAnswer"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnSecondPossibleAnswer" minWidth="20.0" prefWidth="-1.0" text="secondPossibleAnswer">
+        <cellValueFactory>
+          <PropertyValueFactory property="secondPossibleAnswer"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnThirdPossibleAnswer" minWidth="20.0" prefWidth="-1.0" text="thirdPossibleAnswer">
+        <cellValueFactory>
+          <PropertyValueFactory property="thirdPossibleAnswer"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnForthPossibleAnswer" minWidth="20.0" prefWidth="-1.0" text="forthPossibleAnswer">
+        <cellValueFactory>
+          <PropertyValueFactory property="forthPossibleAnswer"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnDialogueLeft" minWidth="20.0" prefWidth="-1.0" text="dialogueLeft">
+        <cellValueFactory>
+          <PropertyValueFactory property="dialogueLeft"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnDialogueRight" minWidth="20.0" prefWidth="-1.0" text="dialogueRight">
+        <cellValueFactory>
+          <PropertyValueFactory property="dialogueRight"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnWordListLeft" minWidth="20.0" prefWidth="-1.0" text="wordListLeft">
+        <cellValueFactory>
+          <PropertyValueFactory property="wordListLeft"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn fx:id="columnWordListRight" minWidth="20.0" prefWidth="-1.0" text="wordListRight">
+        <cellValueFactory>
+          <PropertyValueFactory property="wordListRight"/>
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+</VBox>
